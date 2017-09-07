@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import Note from './Note.js'
 
-// var Board = React.createClass({
 class Board extends React.Component {
   propTypes: {
     count: PropTypes.number,
@@ -11,7 +10,7 @@ class Board extends React.Component {
   constructor(props) {
     super(props);
     this.state = { notes: [] }
-    this.update = this.update.bind(this)
+    this.eachNote = this.eachNote.bind(this)
   }
 
   componentWillMount() {
@@ -70,13 +69,12 @@ class Board extends React.Component {
   render() {
     return (
       <div className='board'>
-        {this.state.notes.map(this.eachNote, this)}
+        {this.state.notes.map(this.eachNote)}
         <button onClick={() => this.add("new note")}>+</button>
       </div>
     )
   }
 
 }
-// })
 
 export default Board;

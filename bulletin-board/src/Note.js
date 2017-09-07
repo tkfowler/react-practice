@@ -2,13 +2,7 @@ import React from 'react';
 import Draggable from 'react-draggable'
 import './App.css';
 
-// var Note = React.createClass({
 class Note extends React.Component {
-  // getInitialState() {
-  //   return {
-  //     editing: false
-  //   }
-  // }
   constructor(props) {
     super(props);
     this.state ={
@@ -76,6 +70,5 @@ class Note extends React.Component {
   }
 
 }
-// })
 
 export default Note
